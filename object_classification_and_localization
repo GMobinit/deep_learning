@@ -7,7 +7,7 @@
       ],
       "metadata": {
         "id": "RWW0hXBzAEen",
-        "outputId": "ec0f6787-4cdc-45a5-a762-48bf443695f4",
+        "outputId": "7ed65eb0-b2ba-41ee-f285-ab337116cf22",
         "colab": {
           "base_uri": "https://localhost:8080/"
         }
@@ -24,7 +24,7 @@
             "remote: Counting objects: 100% (2083/2083), done.\u001b[K\n",
             "remote: Compressing objects: 100% (2078/2078), done.\u001b[K\n",
             "remote: Total 2083 (delta 9), reused 2069 (delta 2), pack-reused 0 (from 0)\u001b[K\n",
-            "Receiving objects: 100% (2083/2083), 26.78 MiB | 40.93 MiB/s, done.\n",
+            "Receiving objects: 100% (2083/2083), 26.78 MiB | 34.54 MiB/s, done.\n",
             "Resolving deltas: 100% (9/9), done.\n"
           ]
         }
@@ -35,7 +35,7 @@
       "source": [
         "from tensorflow.keras.applications.vgg16 import VGG16\n",
         "from tensorflow.keras.layers import Flatten, Dense, Input, Dropout\n",
-        "from tensorflow.keras.models import Sequential, Model\n",
+        "from tensorflow.keras.models import Sequential, Model, load_model\n",
         "from tensorflow.keras.optimizers import Adam\n",
         "from tensorflow.keras.preprocessing.image import img_to_array\n",
         "from tensorflow.keras.preprocessing.image import load_img\n",
@@ -68,7 +68,7 @@
       ],
       "metadata": {
         "id": "qryHSkryBu_7",
-        "outputId": "84592fa0-f559-4b8a-ea7f-20d3d8b6a081",
+        "outputId": "a579bb87-d0f4-44a4-e117-468c02e30c9f",
         "colab": {
           "base_uri": "https://localhost:8080/"
         }
@@ -120,7 +120,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "10P0cQlnowlh",
-        "outputId": "727e7231-b715-495f-e7cb-944a49f7858d"
+        "outputId": "7b9910e7-1c61-4934-ae12-815b55f97d3d"
       },
       "id": "10P0cQlnowlh",
       "execution_count": 7,
@@ -212,7 +212,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "WNmDgyBRKn_G",
-        "outputId": "6554d0ca-bd03-4d48-ef1d-075c5b09033b"
+        "outputId": "63634a13-9c35-4b58-c4ab-a95c54293890"
       },
       "id": "WNmDgyBRKn_G",
       "execution_count": 11,
@@ -256,7 +256,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "dkIZrPobMJrr",
-        "outputId": "a8be560a-c7ab-4790-98e6-5091ceabb84c"
+        "outputId": "4b7b57fd-189a-4028-e22b-466a14430a5a"
       },
       "id": "dkIZrPobMJrr",
       "execution_count": 13,
@@ -283,7 +283,7 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "CDHguGDBMMkj",
-        "outputId": "bf4d8d13-7f08-4cf1-a69c-338f7e94b3c6"
+        "outputId": "8151cd35-b667-45f0-bd32-63fffbfb1bc0"
       },
       "id": "CDHguGDBMMkj",
       "execution_count": 14,
@@ -293,7 +293,7 @@
           "name": "stdout",
           "text": [
             "Downloading data from https://storage.googleapis.com/tensorflow/keras-applications/vgg16/vgg16_weights_tf_dim_ordering_tf_kernels_notop.h5\n",
-            "\u001b[1m58889256/58889256\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m0s\u001b[0m 0us/step\n"
+            "\u001b[1m58889256/58889256\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m2s\u001b[0m 0us/step\n"
           ]
         }
       ]
@@ -357,7 +357,7 @@
         "id": "m2H6PNsMOU5I"
       },
       "id": "m2H6PNsMOU5I",
-      "execution_count": 21,
+      "execution_count": 17,
       "outputs": []
     },
     {
@@ -370,7 +370,7 @@
         "id": "d6AaQfZKREhB"
       },
       "id": "d6AaQfZKREhB",
-      "execution_count": 22,
+      "execution_count": 18,
       "outputs": []
     },
     {
@@ -390,7 +390,7 @@
         "id": "pIaVGWh3Rjn0"
       },
       "id": "pIaVGWh3Rjn0",
-      "execution_count": 23,
+      "execution_count": 19,
       "outputs": []
     },
     {
@@ -409,55 +409,17 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "vFjQETXCR-AK",
-        "outputId": "964f573e-489e-408b-fc31-50a8e75b7048"
+        "outputId": "5cff3763-3141-4ed8-c495-d13bc322fd7a"
       },
       "id": "vFjQETXCR-AK",
-      "execution_count": 24,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
             "Epoch 1/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m21s\u001b[0m 309ms/step - bounding_box_loss: 5.4025e-04 - class_label_accuracy: 1.0000 - class_label_loss: 2.1604e-04 - loss: 7.5634e-04 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 1.6375e-05 - val_loss: 0.0012\n",
-            "Epoch 2/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 214ms/step - bounding_box_loss: 1.1771e-04 - class_label_accuracy: 0.9997 - class_label_loss: 0.0019 - loss: 0.0020 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 3.3264e-05 - val_loss: 0.0012\n",
-            "Epoch 3/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m21s\u001b[0m 221ms/step - bounding_box_loss: 8.5830e-05 - class_label_accuracy: 0.9981 - class_label_loss: 0.0048 - loss: 0.0049 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 2.5663e-04 - val_loss: 0.0014\n",
-            "Epoch 4/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m12s\u001b[0m 228ms/step - bounding_box_loss: 7.5189e-05 - class_label_accuracy: 0.9999 - class_label_loss: 0.0011 - loss: 0.0012 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 3.7976e-05 - val_loss: 0.0012\n",
-            "Epoch 5/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m12s\u001b[0m 226ms/step - bounding_box_loss: 7.6787e-05 - class_label_accuracy: 0.9951 - class_label_loss: 0.0062 - loss: 0.0063 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 1.0476e-04 - val_loss: 0.0013\n",
-            "Epoch 6/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 221ms/step - bounding_box_loss: 8.1964e-05 - class_label_accuracy: 0.9980 - class_label_loss: 0.0060 - loss: 0.0061 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 5.4360e-05 - val_loss: 0.0012\n",
-            "Epoch 7/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 219ms/step - bounding_box_loss: 7.8695e-05 - class_label_accuracy: 1.0000 - class_label_loss: 8.0596e-05 - loss: 1.5930e-04 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 5.4377e-06 - val_loss: 0.0011\n",
-            "Epoch 8/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 217ms/step - bounding_box_loss: 9.0921e-05 - class_label_accuracy: 0.9997 - class_label_loss: 0.0018 - loss: 0.0019 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 0.9975 - val_class_label_loss: 0.0080 - val_loss: 0.0094\n",
-            "Epoch 9/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 217ms/step - bounding_box_loss: 6.9883e-05 - class_label_accuracy: 1.0000 - class_label_loss: 7.9723e-04 - loss: 8.6715e-04 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 2.0861e-07 - val_loss: 0.0011\n",
-            "Epoch 10/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 218ms/step - bounding_box_loss: 8.7084e-05 - class_label_accuracy: 0.9997 - class_label_loss: 9.6433e-04 - loss: 0.0011 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 3.7202e-05 - val_loss: 0.0012\n",
-            "Epoch 11/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 218ms/step - bounding_box_loss: 7.7188e-05 - class_label_accuracy: 0.9969 - class_label_loss: 0.0077 - loss: 0.0078 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 6.2045e-06 - val_loss: 0.0011\n",
-            "Epoch 12/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 217ms/step - bounding_box_loss: 6.0209e-05 - class_label_accuracy: 1.0000 - class_label_loss: 3.1202e-04 - loss: 3.7291e-04 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 1.4729e-07 - val_loss: 0.0011\n",
-            "Epoch 13/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 217ms/step - bounding_box_loss: 5.4141e-05 - class_label_accuracy: 0.9990 - class_label_loss: 0.0011 - loss: 0.0011 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 1.1741e-04 - val_loss: 0.0013\n",
-            "Epoch 14/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 218ms/step - bounding_box_loss: 5.0277e-05 - class_label_accuracy: 1.0000 - class_label_loss: 4.5739e-05 - loss: 9.6041e-05 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 2.9964e-06 - val_loss: 0.0011\n",
-            "Epoch 15/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m12s\u001b[0m 232ms/step - bounding_box_loss: 5.0358e-05 - class_label_accuracy: 1.0000 - class_label_loss: 2.9873e-05 - loss: 8.0244e-05 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 4.0345e-07 - val_loss: 0.0011\n",
-            "Epoch 16/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 221ms/step - bounding_box_loss: 6.0036e-05 - class_label_accuracy: 0.9983 - class_label_loss: 0.0047 - loss: 0.0048 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 2.1267e-06 - val_loss: 0.0012\n",
-            "Epoch 17/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 221ms/step - bounding_box_loss: 6.8600e-05 - class_label_accuracy: 0.9986 - class_label_loss: 0.0042 - loss: 0.0043 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 0.9975 - val_class_label_loss: 0.0112 - val_loss: 0.0126\n",
-            "Epoch 18/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 220ms/step - bounding_box_loss: 7.4561e-05 - class_label_accuracy: 0.9995 - class_label_loss: 9.3468e-04 - loss: 0.0010 - val_bounding_box_loss: 0.0011 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 6.7055e-08 - val_loss: 0.0011\n",
-            "Epoch 19/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 218ms/step - bounding_box_loss: 5.7482e-05 - class_label_accuracy: 1.0000 - class_label_loss: 5.6376e-05 - loss: 1.1386e-04 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 1.8626e-08 - val_loss: 0.0012\n",
-            "Epoch 20/20\n",
-            "\u001b[1m51/51\u001b[0m \u001b[32m━━━━━━━━━━━━━━━━━━━━\u001b[0m\u001b[37m\u001b[0m \u001b[1m11s\u001b[0m 218ms/step - bounding_box_loss: 7.6396e-05 - class_label_accuracy: 1.0000 - class_label_loss: 2.3543e-05 - loss: 9.9948e-05 - val_bounding_box_loss: 0.0012 - val_class_label_accuracy: 1.0000 - val_class_label_loss: 1.0030e-08 - val_loss: 0.0012\n"
+            "\u001b[1m10/51\u001b[0m \u001b[32m━━━\u001b[0m\u001b[37m━━━━━━━━━━━━━━━━━\u001b[0m \u001b[1m13:20\u001b[0m 20s/step - bounding_box_loss: 0.0789 - class_label_accuracy: 0.5708 - class_label_loss: 0.8651 - loss: 0.9440"
           ]
         }
       ]
@@ -465,13 +427,185 @@
     {
       "cell_type": "code",
       "source": [
-        ""
+        "model.save('object_and_box_reco.keras')\n",
+        "with open('lb3.pickle', \"wb\") as f:\n",
+        "  f.write(pickle.dumps(lb))"
       ],
       "metadata": {
         "id": "yNoah55NScWq"
       },
       "id": "yNoah55NScWq",
-      "execution_count": 20,
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "lossNames = [\"loss\", \"class_label_loss\", \"bounding_box_loss\"]\n",
+        "N = np.arange(0, H.params['epochs'])\n",
+        "plt.style.use(\"ggplot\")\n",
+        "(fig, ax) = plt.subplots(3, 1, figsize=(13, 13))\n",
+        "\n",
+        "# loop over the loss names\n",
+        "for (i, l) in enumerate(lossNames):\n",
+        "    # plot the loss for both the training and validation data\n",
+        "    title = \"Loss for {}\".format(l) if l != \"loss\" else \"Total loss\"\n",
+        "    ax[i].set_title(title)\n",
+        "    ax[i].set_xlabel(\"Epoch #\")\n",
+        "    ax[i].set_ylabel(\"Loss\")\n",
+        "    ax[i].plot(N, H.history[l], label=l)\n",
+        "    ax[i].plot(N, H.history[\"val_\" + l], label=\"val_\" + l)\n",
+        "    ax[i].legend()\n",
+        "\n",
+        "# save the losses figure and create a new figure for the accuracies\n",
+        "plt.tight_layout()\n",
+        "\n",
+        "# create a new figure for the accuracies\n",
+        "plt.style.use(\"ggplot\")\n",
+        "plt.figure()\n",
+        "plt.plot(N, H.history[\"class_label_accuracy\"], label=\"class_label_train_acc\")\n",
+        "plt.plot(N, H.history[\"val_class_label_accuracy\"], label=\"val_class_label_acc\")\n",
+        "plt.title(\"Class Label Accuracy\")\n",
+        "plt.xlabel(\"Epoch #\")\n",
+        "plt.ylabel(\"Accuracy\")\n",
+        "plt.legend(loc=\"lower left\")"
+      ],
+      "metadata": {
+        "id": "c7u2dJ31PYOS"
+      },
+      "id": "c7u2dJ31PYOS",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Using trained Model"
+      ],
+      "metadata": {
+        "id": "Nji9WazrRzhe"
+      },
+      "id": "Nji9WazrRzhe"
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "model = load_model('object_and_box_reco.keras')\n",
+        "lb = pickle.loads(open('lb3.pickle', \"rb\").read())\n",
+        "print(lb.classes_)"
+      ],
+      "metadata": {
+        "id": "-Y9BY1NERzLF"
+      },
+      "id": "-Y9BY1NERzLF",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def image_inference(img_path):\n",
+        "  image = load_img(img_path, target_size=(224, 224))\n",
+        "  image = img_to_array(image) / 255.0\n",
+        "  image = np.expand_dims(image, axis=0)\n",
+        "  print(image.shape)\n",
+        "  return model.predict(image)"
+      ],
+      "metadata": {
+        "id": "f2K2CCzdSDS0"
+      },
+      "id": "f2K2CCzdSDS0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def find_label(predicted_array: np.ndarray):\n",
+        "  return  lb.classes_[np.argmax(predicted_array)]"
+      ],
+      "metadata": {
+        "id": "N1eFw-JbWb9y"
+      },
+      "id": "N1eFw-JbWb9y",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def draw_box(img, predicted_box_array, label):\n",
+        "  image = np.copy(img)\n",
+        "  (h,w) = image.shape[:2]\n",
+        "\n",
+        "  (startX, startY, endX, endY) = predicted_box_array\n",
+        "\n",
+        "  startX = int(startX * w)\n",
+        "  startY = int(startY * h)\n",
+        "  endX = int(endX * w)\n",
+        "  endY = int(endY * h)\n",
+        "  y = startY - 10 if startY - 10 > 10 else startY + 10\n",
+        "\n",
+        "  cv2.putText(image, label, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.65, (0,255,0), 2)\n",
+        "  cv2.rectangle(image, (startX, startY), (endX, endY), (0,255,0),2)\n",
+        "\n",
+        "  return image\n"
+      ],
+      "metadata": {
+        "id": "nWLAMug9f634"
+      },
+      "id": "nWLAMug9f634",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "prediction_box, prediction_label = image_inference(\"/content/WIN_20251122_20_43_01_Pro.jpg\")"
+      ],
+      "metadata": {
+        "id": "1ZxmONNWjwNC"
+      },
+      "id": "1ZxmONNWjwNC",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "print(find_label(prediction_label))\n",
+        "print(prediction_box)"
+      ],
+      "metadata": {
+        "id": "ID0AIWoajtpm"
+      },
+      "id": "ID0AIWoajtpm",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "img = cv2.imread(\"/content/WIN_20251122_19_44_16_Pro.jpg\")\n",
+        "label = find_label(prediction_label)\n",
+        "img = draw_box(img, prediction_box[0], label)\n",
+        "image = cv2.imshow(img)"
+      ],
+      "metadata": {
+        "id": "F_N-6taziXFc"
+      },
+      "id": "F_N-6taziXFc",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "Q5XZcFEVi6eg"
+      },
+      "id": "Q5XZcFEVi6eg",
+      "execution_count": null,
       "outputs": []
     }
   ],
