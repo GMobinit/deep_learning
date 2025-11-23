@@ -3,32 +3,45 @@
     {
       "cell_type": "code",
       "source": [
-        "!git clone https://github.com/Alireza-Akhavan/object-detection-notebooks.git"
+        "!pip install --quiet gdown\n",
+        "!gdown --id 1yDktXuw16oRq0v_TwihBTP9KX6mJ4VhX\n"
       ],
       "metadata": {
         "id": "RWW0hXBzAEen",
-        "outputId": "7ed65eb0-b2ba-41ee-f285-ab337116cf22",
+        "outputId": "f2c7524d-5062-47a2-8e8b-e4b60a1cc564",
         "colab": {
           "base_uri": "https://localhost:8080/"
         }
       },
       "id": "RWW0hXBzAEen",
-      "execution_count": 3,
+      "execution_count": 1,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stdout",
           "text": [
-            "Cloning into 'object-detection-notebooks'...\n",
-            "remote: Enumerating objects: 2083, done.\u001b[K\n",
-            "remote: Counting objects: 100% (2083/2083), done.\u001b[K\n",
-            "remote: Compressing objects: 100% (2078/2078), done.\u001b[K\n",
-            "remote: Total 2083 (delta 9), reused 2069 (delta 2), pack-reused 0 (from 0)\u001b[K\n",
-            "Receiving objects: 100% (2083/2083), 26.78 MiB | 34.54 MiB/s, done.\n",
-            "Resolving deltas: 100% (9/9), done.\n"
+            "/usr/local/lib/python3.12/dist-packages/gdown/__main__.py:140: FutureWarning: Option `--id` was deprecated in version 4.3.1 and will be removed in 5.0. You don't need to pass it anymore to use a file ID.\n",
+            "  warnings.warn(\n",
+            "Downloading...\n",
+            "From (original): https://drive.google.com/uc?id=1yDktXuw16oRq0v_TwihBTP9KX6mJ4VhX\n",
+            "From (redirected): https://drive.google.com/uc?id=1yDktXuw16oRq0v_TwihBTP9KX6mJ4VhX&confirm=t&uuid=e13a3991-a5e6-4830-9d92-2c3b96882d5b\n",
+            "To: /content/Diverse_hand_gesture_dataset.zip\n",
+            "100% 1.09G/1.09G [00:40<00:00, 26.7MB/s]\n"
           ]
         }
       ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "!unzip -q /content/Diverse_hand_gesture_dataset.zip"
+      ],
+      "metadata": {
+        "id": "1gIYMyG0FZCJ"
+      },
+      "id": "1gIYMyG0FZCJ",
+      "execution_count": 2,
+      "outputs": []
     },
     {
       "cell_type": "code",
@@ -53,15 +66,14 @@
         "id": "JOA0VUfwA6Zi"
       },
       "id": "JOA0VUfwA6Zi",
-      "execution_count": 4,
+      "execution_count": 3,
       "outputs": []
     },
     {
       "cell_type": "code",
       "source": [
-        "BASE_PATH = '/content/object-detection-notebooks/dataset2'\n",
-        "IMAGE_PATH = os.path.sep.join([BASE_PATH, \"images\"])\n",
-        "ANNOTS_PATH = os.path.sep.join([BASE_PATH, \"annotations\"])\n",
+        "TEST_PATH = '/content/test'\n",
+        "TRAIN_PATH = '/content/train'\n",
         "\n",
         "print(IMAGE_PATH)\n",
         "print(ANNOTS_PATH)"
@@ -74,7 +86,7 @@
         }
       },
       "id": "qryHSkryBu_7",
-      "execution_count": 5,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -98,7 +110,7 @@
         "id": "wQHGYk5golUT"
       },
       "id": "wQHGYk5golUT",
-      "execution_count": 6,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -123,7 +135,7 @@
         "outputId": "7b9910e7-1c61-4934-ae12-815b55f97d3d"
       },
       "id": "10P0cQlnowlh",
-      "execution_count": 7,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -171,7 +183,7 @@
         "id": "Q17FvoqEpLhF"
       },
       "id": "Q17FvoqEpLhF",
-      "execution_count": 8,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -186,7 +198,7 @@
         "id": "mUxnu7_lJRD5"
       },
       "id": "mUxnu7_lJRD5",
-      "execution_count": 9,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -199,7 +211,7 @@
         "id": "jZjzV45zKVQl"
       },
       "id": "jZjzV45zKVQl",
-      "execution_count": 10,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -215,7 +227,7 @@
         "outputId": "63634a13-9c35-4b58-c4ab-a95c54293890"
       },
       "id": "WNmDgyBRKn_G",
-      "execution_count": 11,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -243,7 +255,7 @@
         "id": "6g2pIbtkLT1N"
       },
       "id": "6g2pIbtkLT1N",
-      "execution_count": 12,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -259,7 +271,7 @@
         "outputId": "4b7b57fd-189a-4028-e22b-466a14430a5a"
       },
       "id": "dkIZrPobMJrr",
-      "execution_count": 13,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "execute_result",
@@ -286,7 +298,7 @@
         "outputId": "8151cd35-b667-45f0-bd32-63fffbfb1bc0"
       },
       "id": "CDHguGDBMMkj",
-      "execution_count": 14,
+      "execution_count": null,
       "outputs": [
         {
           "output_type": "stream",
@@ -307,7 +319,7 @@
         "id": "PE-Zf1cbMcE9"
       },
       "id": "PE-Zf1cbMcE9",
-      "execution_count": 15,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -333,7 +345,7 @@
         "id": "V5bzFt7cMhNT"
       },
       "id": "V5bzFt7cMhNT",
-      "execution_count": 16,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -357,7 +369,7 @@
         "id": "m2H6PNsMOU5I"
       },
       "id": "m2H6PNsMOU5I",
-      "execution_count": 17,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -370,7 +382,7 @@
         "id": "d6AaQfZKREhB"
       },
       "id": "d6AaQfZKREhB",
-      "execution_count": 18,
+      "execution_count": null,
       "outputs": []
     },
     {
@@ -390,7 +402,7 @@
         "id": "pIaVGWh3Rjn0"
       },
       "id": "pIaVGWh3Rjn0",
-      "execution_count": 19,
+      "execution_count": null,
       "outputs": []
     },
     {
