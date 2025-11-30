@@ -1,16 +1,6 @@
 {
   "cells": [
     {
-      "cell_type": "markdown",
-      "metadata": {
-        "id": "view-in-github",
-        "colab_type": "text"
-      },
-      "source": [
-        "<a href=\"https://colab.research.google.com/github/GMobinit/deep_learning/blob/home_work/hand_gesture_recognition\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
-      ]
-    },
-    {
       "cell_type": "code",
       "source": [
         "!pip install --quiet gdown\n",
@@ -243,46 +233,6 @@
       "id": "mUxnu7_lJRD5",
       "execution_count": 9,
       "outputs": []
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "# lb = LabelBinarizer()\n",
-        "# labels = lb.fit_transform( labels)"
-      ],
-      "metadata": {
-        "id": "jZjzV45zKVQl"
-      },
-      "id": "jZjzV45zKVQl",
-      "execution_count": null,
-      "outputs": []
-    },
-    {
-      "cell_type": "code",
-      "source": [
-        "lb.classes_"
-      ],
-      "metadata": {
-        "colab": {
-          "base_uri": "https://localhost:8080/"
-        },
-        "id": "WNmDgyBRKn_G",
-        "outputId": "63634a13-9c35-4b58-c4ab-a95c54293890"
-      },
-      "id": "WNmDgyBRKn_G",
-      "execution_count": null,
-      "outputs": [
-        {
-          "output_type": "execute_result",
-          "data": {
-            "text/plain": [
-              "array(['airplane', 'face', 'motorcycle'], dtype='<U10')"
-            ]
-          },
-          "metadata": {},
-          "execution_count": 11
-        }
-      ]
     },
     {
       "cell_type": "code",
@@ -668,8 +618,7 @@
     },
     "colab": {
       "provenance": [],
-      "gpuType": "T4",
-      "include_colab_link": true
+      "gpuType": "T4"
     },
     "accelerator": "GPU"
   },
